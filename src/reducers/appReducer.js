@@ -5,7 +5,7 @@ const defaultState = {
   isLoading: true,
   currencies: [],
   latestExchangeRates: [],
-  selectedCurrencyCode: null,
+  selectedCurrencyCode: "USD",
   monetaryInputValue: null,
   isSelectedCurrencyPopUpOpen: false,
 };
@@ -19,6 +19,10 @@ export default handleActions(
     [types.CHANGE_MONETARY_INPUT]: (state, { payload }) => ({
       ...state,
       monetaryInputValue: payload,
+    }),
+    [types.CHANGE_SELECTED_CURRENCY_CODE]: (state, { payload }) => ({
+      ...state,
+      selectedCurrencyCode: payload,
     }),
   },
   defaultState
