@@ -6,7 +6,7 @@ const defaultState = {
   currencies: [],
   latestExchangeRates: [],
   selectedCurrencyCode: null,
-  monetaryInput: null,
+  monetaryInputValue: null,
   isSelectedCurrencyPopUpOpen: false,
 };
 
@@ -15,6 +15,10 @@ export default handleActions(
     [types.HELLO_WORLD]: (state) => ({
       ...state,
       isLoading: false,
+    }),
+    [types.CHANGE_MONETARY_INPUT]: (state, { payload }) => ({
+      ...state,
+      monetaryInputValue: payload,
     }),
   },
   defaultState

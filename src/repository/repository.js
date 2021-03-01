@@ -1,0 +1,1 @@
+// GET https://api.exchangeratesapi.io/latest?base=USD
