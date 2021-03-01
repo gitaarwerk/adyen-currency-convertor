@@ -1,18 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { currencyCodes } from "../../repository/currencyCodes";
+
 import {
   getLatestExchangeRates,
   getIsLoading,
   getMonetaryInputValue,
   getSelectedCurrencyCode,
   getIsSelectedCurrencyPopUpOpen,
+  getSelectedOutputCurrencies,
+  getSelectedOutputExchangeRates,
 } from "../../selectors/selectors";
 import {
-  helloWorld,
   onChangeMonetaryInput,
   changeSelectedCurrencyCode,
   openCurrencySelector,
   closeCurrencySelector,
+  fetchLatestExchangeRates,
+  fetchLatestExchangeRatesSuccess,
+  fetchLatestExchangeRatesFailed,
 } from "../../actionCreators/actionCreators";
 import { App } from "../App";
 
@@ -25,6 +31,10 @@ export const AppShell = () => {
     getIsSelectedCurrencyPopUpOpen
   );
   const inputValue = useSelector(getMonetaryInputValue);
+
+  const selectedOutputExchangeRates = useSelector(
+    getSelectedOutputExchangeRates
+  );
 
   // action creators
   const dispatch = useDispatch();
@@ -40,11 +50,24 @@ export const AppShell = () => {
 
   // Side effects
   useEffect(() => {
-    // If no exchange rates are available, call it
-    if (!latestExchangeRates.length) {
-      dispatch(helloWorld());
+    // If no exchange rates are available and nothing is loading..., fetch rates
+    if (latestExchangeRates.length === 0 && isLoading === false) {
+      try {
+        dispatch(fetchLatestExchangeRates());
+        fetch(
+          `https://api.exchangeratesapi.io/latest?base=${selectedCurrencyCode}`
+        )
+          .then((results) => results.json())
+          .then((data) => {
+            console.log("latst data", data.rates);
+            dispatch(fetchLatestExchangeRatesSuccess(data.rates));
+          });
+      } catch (error) {
+        dispatch(fetchLatestExchangeRatesFailed());
+        console.error(error);
+      }
     }
-  }, [dispatch, latestExchangeRates]);
+  }, [dispatch, latestExchangeRates, isLoading, selectedCurrencyCode]);
 
   return (
     <App
@@ -56,6 +79,7 @@ export const AppShell = () => {
       isSelectedCurrencyPopUpOpen={isSelectedCurrencyPopUpOpen}
       onOpenCurrencySelector={onOpenCurrencySelector}
       onCloseCurrencySelector={onCloseCurrencySelector}
+      selectedOutputCurrencies={selectedOutputExchangeRates}
     />
   );
 };

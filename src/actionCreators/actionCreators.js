@@ -11,3 +11,8 @@ export const changeSelectedCurrencyCode = create(
 
 export const openCurrencySelector = create(types.OPEN_CURRENCY_CODE_SELECTOR);
 export const closeCurrencySelector = create(types.CLOSE_CURRENCY_CODE_SELECTOR);
+
+
+export const fetchLatestExchangeRates = create(types.FETCH_LATEST_EXCHANGE_RATES)
+export const fetchLatestExchangeRatesSuccess = create(types.FETCH_LATEST_EXCHANGE_RATES_SUCCESS)
+export const fetchLatestExchangeRatesFailed = create(types.FETCH_LATEST_EXCHANGE_RATES_FAILED)
