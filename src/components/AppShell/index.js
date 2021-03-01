@@ -1,42 +1,25 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import * as actions from '../actionCreators/actionCreators';
-import App from '../components/App';
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { getLatestExchangeRates, getIsLoading } from "../../selectors/selectors";
+import { helloWorld } from "../../actionCreators/actionCreators";
 
-class AppShell extends React.Component {
-    componentDidMount() {
-        this.props.getCurrentGPSLocation();
+export const AppShell = () => {
+  const dispatch = useDispatch();
+  const latestExchangeRates = useSelector(getLatestExchangeRates);
+  const isLoading = useSelector(getIsLoading);
+
+  useEffect(() => {
+    // If no exchange rates are available, call it
+    if (!latestExchangeRates.length) {
+      dispatch(helloWorld());
     }
+  }, [dispatch, latestExchangeRates]);
 
-    render() {
-        return <App location={this.props.location} />;
-    }
-}
-
-const mergeProps = (stateProps, dispatchProps) => {
-    const { location } = stateProps;
-    const { getCurrentGPSLocation } = dispatchProps;
-
-    return {
-        location,
-        getCurrentGPSLocation
-    };
+  return (
+    <div>
+      {isLoading
+        ? "Hello Adyen, I am still loading"
+        : "Loaded..., now working on the rest..."}
+    </div>
+  );
 };
-
-function mapStateToProps({ location, actions }) {
-    return {
-        location,
-        actions
-    };
-}
-
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators(actions, dispatch);
-}
-
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps,
-    mergeProps
-)(AppShell);
