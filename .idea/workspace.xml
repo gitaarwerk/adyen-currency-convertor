@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac1b3ed9-839c-4055-9126-d6799738caf4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,8 +20,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="150">
-                <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+              <first_editor relative-caret-position="135">
+                <caret line="5" column="186" selection-start-line="5" selection-start-column="186" selection-end-line="5" selection-end-column="186" />
               </first_editor>
               <second_editor />
             </state>
@@ -95,12 +96,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1614591840556</updated>
-      <workItem from="1614591842385" duration="996000" />
+      <workItem from="1614591842385" duration="1787000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="996000" />
+    <option name="totallyTimeSpent" value="1787000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="793" extended-state="0" />
@@ -134,8 +135,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="150">
-            <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <first_editor relative-caret-position="135">
+            <caret line="5" column="186" selection-start-line="5" selection-start-column="186" selection-end-line="5" selection-end-column="186" />
           </first_editor>
           <second_editor />
         </state>

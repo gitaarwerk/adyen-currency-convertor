@@ -22,3 +22,5 @@ Not entirely sure how to approach this yet, but I think I will start mobile firs
 
 I may go TypeScript, but since I have not yet the most experience here, I may do this with PropTypes for now. TypeScript may cost me too much time. 
 
+## Out of scope
+Currency can be a tricky thing. Especially when it comes to output. So I've decided to keep the localisation simple. Just stating I know about this, but choosing it not to do.
