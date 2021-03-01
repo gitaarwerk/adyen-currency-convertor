@@ -24,6 +24,14 @@ export default handleActions(
       ...state,
       selectedCurrencyCode: payload,
     }),
+    [types.OPEN_CURRENCY_CODE_SELECTOR]: (state) => ({
+      ...state,
+      isSelectedCurrencyPopUpOpen: true,
+    }),
+    [types.CLOSE_CURRENCY_CODE_SELECTOR]: (state) => ({
+      ...state,
+      isSelectedCurrencyPopUpOpen: false,
+    }),
   },
   defaultState
 );
