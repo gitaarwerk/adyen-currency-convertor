@@ -7,7 +7,8 @@ const defaultState = {
   latestExchangeRates: [],
   selectedCurrencyCode: "USD",
   monetaryInputValue: null,
-  isSelectedCurrencyPopUpOpen: false,
+  isSelectedInputCurrencyPopUpOpen: false,
+  isSelectedOutputCurrencyPopUpOpen: false,
 };
 
 export default handleActions(
@@ -16,17 +17,38 @@ export default handleActions(
       ...state,
       monetaryInputValue: payload,
     }),
-    [types.CHANGE_SELECTED_CURRENCY_CODE]: (state, { payload }) => ({
+    [types.CHANGE_SELECTED_INPUT_CURRENCY_CODE]: (state, { payload }) => ({
       ...state,
       selectedCurrencyCode: payload,
+      latestExchangeRates: [],
     }),
-    [types.OPEN_CURRENCY_CODE_SELECTOR]: (state) => ({
+    [types.CHANGE_SELECTED_OUTPUT_CURRENCY_CODE]: (state, { payload }) => ({
       ...state,
-      isSelectedCurrencyPopUpOpen: true,
+      selectedOutputCurrencies: payload,
     }),
-    [types.CLOSE_CURRENCY_CODE_SELECTOR]: (state) => ({
+    [types.OPEN_INPUT_CURRENCY_CODE_SELECTOR]: (state) => ({
       ...state,
-      isSelectedCurrencyPopUpOpen: false,
+      isSelectedInputCurrencyPopUpOpen: true,
+    }),
+    [types.CLOSE_INPUT_CURRENCY_CODE_SELECTOR]: (state) => ({
+      ...state,
+      isSelectedInputCurrencyPopUpOpen: false,
+    }),
+    [types.OPEN_INPUT_CURRENCY_CODE_SELECTOR]: (state) => ({
+      ...state,
+      isSelectedInputCurrencyPopUpOpen: true,
+    }),
+    [types.CLOSE_INPUT_CURRENCY_CODE_SELECTOR]: (state) => ({
+      ...state,
+      isSelectedOutputCurrencyPopUpOpen: false,
+    }),
+    [types.OPEN_OUTPUT_CURRENCY_CODE_SELECTOR]: (state) => ({
+      ...state,
+      isSelectedOutputCurrencyPopUpOpen: true,
+    }),
+    [types.CLOSE_OUTPUT_CURRENCY_CODE_SELECTOR]: (state) => ({
+      ...state,
+      isSelectedOutputCurrencyPopUpOpen: false,
     }),
     [types.FETCH_LATEST_EXCHANGE_RATES]: (state) => ({
       ...state,

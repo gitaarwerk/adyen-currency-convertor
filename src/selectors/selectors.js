@@ -9,11 +9,19 @@ export const getMonetaryInputValue = (state) => state.monetaryInputValue;
 
 export const getSelectedCurrencyCode = (state) => state.selectedCurrencyCode;
 
-export const getIsSelectedCurrencyPopUpOpen = (state) =>
-  state.isSelectedCurrencyPopUpOpen;
+export const getIsSelectedInputCurrencyPopUpOpen = (state) =>
+  state.isSelectedInputCurrencyPopUpOpen;
+
+export const getIsSelectedOutputCurrencyPopUpOpen = (state) =>
+    state.isSelectedOutputCurrencyPopUpOpen;
 
 export const getSelectedOutputCurrencies = (state) =>
   state.selectedOutputCurrencies;
+
+export const getAvailableCurrencyCodes = (state) => {
+  const exchangeRates = getLatestExchangeRates(state);
+  return currencyCodes.filter((currency) => !!exchangeRates[currency.cc]);
+};
 
 export const getSelectedOutputExchangeRates = (state) =>
   getSelectedOutputCurrencies(state).map((selectedCurrency) => {

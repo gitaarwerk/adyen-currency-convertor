@@ -1,18 +1,36 @@
 import { createAction as create } from "redux-actions";
 import * as types from "../actionTypes/actionTypes";
 
-export const helloWorld = create(types.HELLO_WORLD);
-
 export const onChangeMonetaryInput = create(types.CHANGE_MONETARY_INPUT);
 
-export const changeSelectedCurrencyCode = create(
-  types.CHANGE_SELECTED_CURRENCY_CODE
+export const changeSelectedInputCurrencyCode = create(
+  types.CHANGE_SELECTED_INPUT_CURRENCY_CODE
 );
 
-export const openCurrencySelector = create(types.OPEN_CURRENCY_CODE_SELECTOR);
-export const closeCurrencySelector = create(types.CLOSE_CURRENCY_CODE_SELECTOR);
+export const changeSelectedOutputCurrencyCode = create(
+  types.CHANGE_SELECTED_OUTPUT_CURRENCY_CODE
+);
 
+export const openInputCurrencySelector = create(
+  types.OPEN_INPUT_CURRENCY_CODE_SELECTOR
+);
+export const closeInputCurrencySelector = create(
+  types.CLOSE_INPUT_CURRENCY_CODE_SELECTOR
+);
 
-export const fetchLatestExchangeRates = create(types.FETCH_LATEST_EXCHANGE_RATES)
-export const fetchLatestExchangeRatesSuccess = create(types.FETCH_LATEST_EXCHANGE_RATES_SUCCESS)
-export const fetchLatestExchangeRatesFailed = create(types.FETCH_LATEST_EXCHANGE_RATES_FAILED)
+export const openOutputCurrencySelector = create(
+  types.OPEN_OUTPUT_CURRENCY_CODE_SELECTOR
+);
+export const closeOutputCurrencySelector = create(
+  types.CLOSE_OUTPUT_CURRENCY_CODE_SELECTOR
+);
+
+export const fetchLatestExchangeRates = create(
+  types.FETCH_LATEST_EXCHANGE_RATES
+);
+export const fetchLatestExchangeRatesSuccess = create(
+  types.FETCH_LATEST_EXCHANGE_RATES_SUCCESS
+);
+export const fetchLatestExchangeRatesFailed = create(
+  types.FETCH_LATEST_EXCHANGE_RATES_FAILED
+);

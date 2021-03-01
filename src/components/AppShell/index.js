@@ -1,21 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { currencyCodes } from "../../repository/currencyCodes";
 
 import {
   getLatestExchangeRates,
   getIsLoading,
   getMonetaryInputValue,
   getSelectedCurrencyCode,
-  getIsSelectedCurrencyPopUpOpen,
-  getSelectedOutputCurrencies,
+  getIsSelectedInputCurrencyPopUpOpen,
+  getIsSelectedOutputCurrencyPopUpOpen,
   getSelectedOutputExchangeRates,
 } from "../../selectors/selectors";
 import {
   onChangeMonetaryInput,
-  changeSelectedCurrencyCode,
-  openCurrencySelector,
-  closeCurrencySelector,
+  changeSelectedInputCurrencyCode,
+  changeSelectedOutputCurrencyCode,
+  openInputCurrencySelector,
+  closeInputCurrencySelector,
+  openOutputCurrencySelector,
+  closeOutputCurrencySelector,
   fetchLatestExchangeRates,
   fetchLatestExchangeRatesSuccess,
   fetchLatestExchangeRatesFailed,
@@ -27,8 +29,11 @@ export const AppShell = () => {
   const latestExchangeRates = useSelector(getLatestExchangeRates);
   const isLoading = useSelector(getIsLoading);
   const selectedCurrencyCode = useSelector(getSelectedCurrencyCode);
-  const isSelectedCurrencyPopUpOpen = useSelector(
-    getIsSelectedCurrencyPopUpOpen
+  const isSelectedInputCurrencyPopUpOpen = useSelector(
+    getIsSelectedInputCurrencyPopUpOpen
+  );
+  const isSelectedOutputCurrencyPopUpOpen = useSelector(
+    getIsSelectedOutputCurrencyPopUpOpen
   );
   const inputValue = useSelector(getMonetaryInputValue);
 
@@ -38,15 +43,26 @@ export const AppShell = () => {
 
   // action creators
   const dispatch = useDispatch();
-  const onChangeCurrencyCode = (currencyCode) => {
-    dispatch(changeSelectedCurrencyCode(currencyCode));
+  const onChangeInputCurrencyCode = (currencyCode) => {
+    dispatch(changeSelectedInputCurrencyCode(currencyCode));
   };
+  const onChangeOutputCurrencyCode = (currencyCodes) => {
+    dispatch(changeSelectedOutputCurrencyCode(currencyCodes));
+  };
+
   const onChangeInput = (event) => {
     dispatch(onChangeMonetaryInput(event.target.value));
   };
 
-  const onOpenCurrencySelector = () => dispatch(openCurrencySelector());
-  const onCloseCurrencySelector = () => dispatch(closeCurrencySelector());
+  const onOpenCurrencyInputSelector = () =>
+    dispatch(openInputCurrencySelector());
+  const onCloseCurrencyInputSelector = () =>
+    dispatch(closeInputCurrencySelector());
+
+  const onOpenCurrencyOutputSelector = () =>
+    dispatch(openOutputCurrencySelector());
+  const onCloseCurrencyOutputSelector = () =>
+    dispatch(closeOutputCurrencySelector());
 
   // Side effects
   useEffect(() => {
@@ -59,7 +75,6 @@ export const AppShell = () => {
         )
           .then((results) => results.json())
           .then((data) => {
-            console.log("latst data", data.rates);
             dispatch(fetchLatestExchangeRatesSuccess(data.rates));
           });
       } catch (error) {
@@ -75,11 +90,20 @@ export const AppShell = () => {
       onChangeMonetaryInput={onChangeInput}
       inputValue={inputValue}
       selectedCurrencyCode={selectedCurrencyCode}
-      onChangeCurrencyCode={onChangeCurrencyCode}
-      isSelectedCurrencyPopUpOpen={isSelectedCurrencyPopUpOpen}
-      onOpenCurrencySelector={onOpenCurrencySelector}
-      onCloseCurrencySelector={onCloseCurrencySelector}
+      isSelectedInputCurrencyPopUpOpen={isSelectedInputCurrencyPopUpOpen}
+      onChangeInputCurrencyCode={onChangeInputCurrencyCode}
+      onOpenInputCurrencySelector={onOpenCurrencyInputSelector}
+      onCloseInputCurrencySelector={onCloseCurrencyInputSelector}
+      onOpenOutputCurrencySelector={onOpenCurrencyOutputSelector}
+      onCloseOutputCurrencySelector={onCloseCurrencyOutputSelector}
       selectedOutputCurrencies={selectedOutputExchangeRates}
+      isSelectedOutputCurrencyPopUpOpen={isSelectedOutputCurrencyPopUpOpen}
+      onChangeOutputCurrencyCode={onChangeOutputCurrencyCode}
     />
   );
 };
+
+// isSelectedOutputCurrencyPopUpOpen={isSelectedOutputCurrencyPopUpOpen}
+
+// isSelectedOutputCurrencyPopUpOpen,
+// onChangeOutputCurrencyCode,

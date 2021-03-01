@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { currencyCodes } from "../../repository/currencyCodes";
+import { getAvailableCurrencyCodes } from "../../selectors/selectors";
+import { useSelector } from "react-redux";
 
 export const CurrencyCodeSelector = ({
   onCloseCurrencySelector,
@@ -8,6 +9,7 @@ export const CurrencyCodeSelector = ({
   type,
 }) => {
   const canOnlySelectOne = type === "radio";
+  console.log(type, canOnlySelectOne)
 
   const [selectedCurrencies, setSelectedCurrencies] = useState(
     selectedCurrencyCodes || []
@@ -21,6 +23,8 @@ export const CurrencyCodeSelector = ({
     }
   };
 
+  const filteredCurrencyCodes = useSelector(getAvailableCurrencyCodes);
+
   const onClickSelectCurrencyButton = () => {
     canOnlySelectOne
       ? onSelectCurrency(selectedCurrencies[0])
@@ -31,7 +35,7 @@ export const CurrencyCodeSelector = ({
     <section>
       <h2 onClick={onCloseCurrencySelector}>Currencies</h2>
       <ul>
-        {currencyCodes.map((currency) => (
+        {filteredCurrencyCodes.map((currency) => (
           <li key={currency.cc}>
             <label>
               <input

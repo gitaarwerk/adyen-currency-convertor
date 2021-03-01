@@ -6,24 +6,44 @@ export const App = ({
   isLoading,
   onChangeMonetaryInput,
   inputValue,
-  isSelectedCurrencyPopUpOpen,
-  onOpenCurrencySelector,
-  onCloseCurrencySelector,
-  onChangeCurrencyCode,
+  isSelectedInputCurrencyPopUpOpen,
+  onOpenInputCurrencySelector,
+  onCloseInputCurrencySelector,
+  onChangeInputCurrencyCode,
+
+  isSelectedOutputCurrencyPopUpOpen,
+  onOpenOutputCurrencySelector,
+  onCloseOutputCurrencySelector,
+  onChangeOutputCurrencyCode,
+
   selectedOutputCurrencies,
 }) => (
   <div>
-    {isSelectedCurrencyPopUpOpen && (
+    {console.log("wat", isSelectedOutputCurrencyPopUpOpen)}
+    {isSelectedInputCurrencyPopUpOpen && (
       <CurrencyCodeSelector
-        onCloseCurrencySelector={onCloseCurrencySelector}
-        onSelectCurrency={onChangeCurrencyCode}
+        onCloseCurrencySelector={onCloseInputCurrencySelector}
+        onSelectCurrency={onChangeOutputCurrencyCode}
         type="radio"
-      >
-        Selector open
-      </CurrencyCodeSelector>
+      />
     )}
-    <button onClick={onOpenCurrencySelector}>{selectedCurrencyCode}</button>:
-    <input type="number" pattern="[^0-9.,-]" onChange={onChangeMonetaryInput} placeholder="47,95" />
+    {isSelectedOutputCurrencyPopUpOpen && (
+      <CurrencyCodeSelector
+        onCloseCurrencySelector={onCloseOutputCurrencySelector}
+        onSelectCurrency={onChangeOutputCurrencyCode}
+        type="checkbox"
+      />
+    )}
+    <button onClick={onOpenInputCurrencySelector}>
+      {selectedCurrencyCode}
+    </button>
+    :
+    <input
+      type="number"
+      pattern="[^0-9.,-]"
+      onChange={onChangeMonetaryInput}
+      placeholder="47,95"
+    />
     This is what I typed: {inputValue}
     <div>
       <h3>Chosen currencies to convert in:</h3>
@@ -46,6 +66,13 @@ export const App = ({
           );
         })}
       </ul>
+      <div>
+        <button onClick={onOpenOutputCurrencySelector}>
+          {selectedOutputCurrencies.length > 1
+            ? "Add or remove currencies"
+            : "Add currency"}
+        </button>
+      </div>
     </div>
   </div>
 );
