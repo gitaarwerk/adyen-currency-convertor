@@ -14,7 +14,7 @@ export const AppShell = () => {
       dispatch(helloWorld());
     }
   }, [dispatch, latestExchangeRates]);
-
+ 
   return (
     <div>
       {isLoading
