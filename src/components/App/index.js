@@ -1,5 +1,6 @@
 import React from "react";
 import { CurrencyCodeSelector } from "../CurrencyCodeSelector";
+import { Header } from "../Header";
 
 export const App = ({
   selectedCurrencyCode,
@@ -10,16 +11,14 @@ export const App = ({
   onOpenInputCurrencySelector,
   onCloseInputCurrencySelector,
   onChangeInputCurrencyCode,
-
   isSelectedOutputCurrencyPopUpOpen,
   onOpenOutputCurrencySelector,
   onCloseOutputCurrencySelector,
   onChangeOutputCurrencyCode,
-
   selectedOutputCurrencies,
 }) => (
   <div>
-    {console.log("wat", isSelectedOutputCurrencyPopUpOpen)}
+    <Header />
     {isSelectedInputCurrencyPopUpOpen && (
       <CurrencyCodeSelector
         onCloseCurrencySelector={onCloseInputCurrencySelector}
