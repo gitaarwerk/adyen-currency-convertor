@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
 import { AddButton } from "../AddButton";
-
+import { OutputCurrencyItem } from "../OutputCurrencyItem";
 export const OutputCurrencies = ({
   selectedOutputCurrencies,
   onOpenCurrencyOutputSelector,
@@ -12,19 +12,12 @@ export const OutputCurrencies = ({
         {selectedOutputCurrencies.length &&
           selectedOutputCurrencies.map((currency) => {
             return (
-              <li key={currency.cc} style={{ margin: 20 }}>
-                <div>[flag]</div>
-                <div>
-                  <div>
-                    <small>{currency.name}</small>
-                  </div>
-                  <div>
-                    <strong>{currency.cc}</strong>
-                  </div>
-                  <div>rate: {currency.rate || "no rate available"}</div>
-                  <div>{currency.value}</div>
-                </div>
-              </li>
+              <OutputCurrencyItem
+                currencyCode={currency.currencyCode}
+                currencyName={currency.name}
+                calculatedValue={currency.value}
+                exchangeRate={currency.rate}
+              />
             );
           })}
       </CurrencyList>
@@ -49,6 +42,7 @@ const CurrencyListContainer = styled.div`
 
 const CurrencyList = styled.ul`
   margin: 0;
+  padding: 0;
   width: 100%;
   display: flex;
 `;

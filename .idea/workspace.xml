@@ -2,14 +2,65 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac1b3ed9-839c-4055-9126-d6799738caf4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/AddButton/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/OutputCurrencies/OutputCurrencies.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/OutputCurrencies/OutputCurrenciesContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/OutputCurrencies/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/aed.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/ars.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/aud.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/bdt.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/bgn.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/brl.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/bwp.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/cad.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/chf.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/clp.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/cny.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/crc.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/czk.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/dkk.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/egp.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/eur.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/gbp.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/gel.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/ghs.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/hkd.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/hrk.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/huf.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/idr.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/ils.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/inr.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/jpy.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/kes.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/krw.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/lkr.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/mad.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/mxn.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/myr.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/ngn.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/nok.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/npr.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/nzd.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/pen.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/php.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/pkr.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/pln.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/ron.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/rub.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/sek.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/sgd.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/thb.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/try.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/tzs.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/uah.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/ugx.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/usd.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/vnd.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/xof.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/flags/zar.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ExchangeRateIcon/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/OutputCurrencyItem/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AppShell/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppShell/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/OutputCurrencies/OutputCurrencies.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/OutputCurrencies/OutputCurrencies.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/convertCurrency.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/convertCurrency.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/appReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/appReducer.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,7 +77,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/Header/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+              <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -55,11 +106,23 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/OutputCurrencyItem/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="401">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/OutputCurrencies/OutputCurrencies.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="63" column="17" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
+            <state relative-caret-position="239">
+              <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -80,7 +143,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/OutputCurrencies/OutputCurrenciesContainer.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -98,18 +161,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/CurrencyCodeSelector/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/AppShell/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1125">
@@ -117,15 +168,6 @@
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/actionTypes/actionTypes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="87" selection-start-line="7" selection-start-column="87" selection-end-line="7" selection-end-column="87" />
             </state>
           </provider>
         </entry>
@@ -178,11 +220,9 @@
         <option value="$PROJECT_DIR$/src/repository/repository.js" />
         <option value="$PROJECT_DIR$/src/repository/currencyCodes.js" />
         <option value="$PROJECT_DIR$/src/components/CurrencySelector/index.js" />
-        <option value="$PROJECT_DIR$/src/helpers/convertCurrency.js" />
         <option value="$PROJECT_DIR$/src/selectors/selectors.js" />
         <option value="$PROJECT_DIR$/src/actionCreators/actionCreators.js" />
         <option value="$PROJECT_DIR$/src/actionTypes/actionTypes.js" />
-        <option value="$PROJECT_DIR$/src/reducers/appReducer.js" />
         <option value="$PROJECT_DIR$/src/components/CurrencyCodeSelector/index.js" />
         <option value="$PROJECT_DIR$/src/components/AdyenLogo/index.js" />
         <option value="$PROJECT_DIR$/src/components/Header/index.js" />
@@ -198,6 +238,10 @@
         <option value="$PROJECT_DIR$/src/components/AppShell/index.js" />
         <option value="$PROJECT_DIR$/src/components/App/index.js" />
         <option value="$PROJECT_DIR$/src/components/AddButton/index.js" />
+        <option value="$PROJECT_DIR$/src/components/ExchangeRateIcon/index.js" />
+        <option value="$PROJECT_DIR$/src/reducers/appReducer.js" />
+        <option value="$PROJECT_DIR$/src/helpers/convertCurrency.js" />
+        <option value="$PROJECT_DIR$/src/components/OutputCurrencyItem/index.js" />
         <option value="$PROJECT_DIR$/src/components/OutputCurrencies/OutputCurrencies.js" />
       </list>
     </option>
@@ -236,35 +280,7 @@
               <item name="currency-convertor" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="AddButton" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="currency-convertor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="currency-convertor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="AdyenLogo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="currency-convertor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="currency-convertor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="App" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="currency-convertor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="currency-convertor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="AppShell" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="currency-convertor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="currency-convertor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="CurrencyInputField" type="462c0819:PsiDirectoryNode" />
+              <item name="ExchangeRateIcon" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="currency-convertor" type="b2602c69:ProjectViewProjectNode" />
@@ -272,6 +288,18 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="OutputCurrencies" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="currency-convertor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="currency-convertor" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="helpers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="currency-convertor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="currency-convertor" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="reducers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -292,7 +320,12 @@
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src/assets/flags" />
       <recent name="$PROJECT_DIR$/src/components" />
     </key>
   </component>
@@ -318,12 +351,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1614591840556</updated>
-      <workItem from="1614591842385" duration="27344000" />
+      <workItem from="1614591842385" duration="29275000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27344000" />
+    <option name="totallyTimeSpent" value="29275000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="793" extended-state="0" />
@@ -414,13 +447,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/helpers/convertCurrency.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/store.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -435,16 +461,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="87" selection-start-line="7" selection-start-column="87" selection-end-line="7" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/appReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="46" column="26" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -481,7 +497,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/Header/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -555,7 +571,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/OutputCurrencies/OutputCurrenciesContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -569,6 +585,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/flags/zar.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ExchangeRateIcon/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="13" column="463" selection-start-line="13" selection-start-column="463" selection-end-line="13" selection-end-column="463" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/OutputCurrencies/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -576,10 +602,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/helpers/convertCurrency.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/appReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/OutputCurrencyItem/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/OutputCurrencies/OutputCurrencies.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="63" column="17" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
+        <state relative-caret-position="239">
+          <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>

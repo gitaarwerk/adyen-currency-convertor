@@ -3,9 +3,9 @@ import * as types from "../actionTypes/actionTypes";
 
 const defaultState = {
   isLoading: false,
-  selectedOutputCurrencies: ["EUR", "GBP"],
+  selectedOutputCurrencies: ["USD", "GBP"],
   latestExchangeRates: [],
-  selectedCurrencyCode: "USD",
+  selectedCurrencyCode: "EUR",
   monetaryInputValue: null,
   isSelectedInputCurrencyPopUpOpen: false,
   isSelectedOutputCurrencyPopUpOpen: false,
