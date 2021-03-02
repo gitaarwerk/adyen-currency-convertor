@@ -15,7 +15,7 @@ export const CurrencyInputField = ({
     </ButtonContainer>
     <InputFieldContainer>
       <MonetaryInput
-        type="number"
+        type="text"
         pattern="[^0-9.,-]"
         onChange={onChangeMonetaryInput}
         placeholder="47,95"

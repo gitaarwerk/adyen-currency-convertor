@@ -9,7 +9,7 @@ export const OutputCurrencyItem = ({
   exchangeRate,
   calculatedValue,
 }) => (
-  <CurrencyItem key={currencyCode} className={className}>
+  <CurrencyItem className={className}>
     <CurrencyFlag src={`/assets/flags/${currencyCode}.svg`} />
     <CurrencyData>
       <CurrencyName>
@@ -27,7 +27,6 @@ export const OutputCurrencyItem = ({
   </CurrencyItem>
 );
 
-
 const CurrencyItem = styled.li`
   display: flex;
   flex-shrink: 0;
@@ -39,8 +38,6 @@ const StyledExchangeRateIcon = styled(ExchangeRateIcon)`
   fill: currentColor;
   margin-right: 0.4rem;
 `;
-
-
 
 const Rate = styled.small`
   color: #666;

@@ -13,6 +13,7 @@ export const OutputCurrencies = ({
           selectedOutputCurrencies.map((currency) => {
             return (
               <OutputCurrencyItem
+                key={currency.currencyCode}
                 currencyCode={currency.currencyCode}
                 currencyName={currency.name}
                 calculatedValue={currency.value}

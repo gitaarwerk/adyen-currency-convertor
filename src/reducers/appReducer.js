@@ -40,7 +40,7 @@ export default handleActions(
     }),
     [types.CLOSE_INPUT_CURRENCY_CODE_SELECTOR]: (state) => ({
       ...state,
-      isSelectedOutputCurrencyPopUpOpen: false,
+      isSelectedInputCurrencyPopUpOpen: false,
     }),
     [types.OPEN_OUTPUT_CURRENCY_CODE_SELECTOR]: (state) => ({
       ...state,

@@ -8,6 +8,7 @@ import {
   getMonetaryInputValue,
   getIsSelectedInputCurrencyPopUpOpen,
   getIsSelectedOutputCurrencyPopUpOpen,
+  getSelectedOutputCurrencies,
   getSelectedCurrencyCode,
 } from "../../selectors/selectors";
 import {
@@ -24,6 +25,7 @@ export const AppShell = () => {
   // selectors
   const latestExchangeRates = useSelector(getLatestExchangeRates);
   const isLoading = useSelector(getIsLoading);
+  const selectedOutputCurrencyCodes = useSelector(getSelectedOutputCurrencies);
   const selectedCurrencyCode = useSelector(getSelectedCurrencyCode);
   const isSelectedInputCurrencyPopUpOpen = useSelector(
     getIsSelectedInputCurrencyPopUpOpen
@@ -32,8 +34,6 @@ export const AppShell = () => {
     getIsSelectedOutputCurrencyPopUpOpen
   );
   const inputValue = useSelector(getMonetaryInputValue);
-
-
 
   // action creators
   const dispatch = useDispatch();
@@ -46,7 +46,6 @@ export const AppShell = () => {
 
   const onCloseCurrencyInputSelector = () =>
     dispatch(closeInputCurrencySelector());
-
 
   const onCloseCurrencyOutputSelector = () =>
     dispatch(closeOutputCurrencySelector());
@@ -81,6 +80,8 @@ export const AppShell = () => {
       onCloseOutputCurrencySelector={onCloseCurrencyOutputSelector}
       isSelectedOutputCurrencyPopUpOpen={isSelectedOutputCurrencyPopUpOpen}
       onChangeOutputCurrencyCode={onChangeOutputCurrencyCode}
+      selectedOutputCurrencyCodes={selectedOutputCurrencyCodes}
+      selectedCurrencyCode={selectedCurrencyCode}
     />
   );
 };
