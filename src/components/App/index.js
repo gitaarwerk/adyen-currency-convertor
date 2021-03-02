@@ -1,14 +1,12 @@
 import React from "react";
 import { CurrencyCodeSelector } from "../CurrencyCodeSelector";
 import { Header } from "../Header";
+import { CurrencyInputField } from "../CurrencyInputField";
 
 export const App = ({
-  selectedCurrencyCode,
   isLoading,
-  onChangeMonetaryInput,
   inputValue,
   isSelectedInputCurrencyPopUpOpen,
-  onOpenInputCurrencySelector,
   onCloseInputCurrencySelector,
   onChangeInputCurrencyCode,
   isSelectedOutputCurrencyPopUpOpen,
@@ -19,6 +17,7 @@ export const App = ({
 }) => (
   <div>
     <Header />
+    <CurrencyInputField />
     {isSelectedInputCurrencyPopUpOpen && (
       <CurrencyCodeSelector
         onCloseCurrencySelector={onCloseInputCurrencySelector}
@@ -33,16 +32,6 @@ export const App = ({
         type="checkbox"
       />
     )}
-    <button onClick={onOpenInputCurrencySelector}>
-      {selectedCurrencyCode}
-    </button>
-    :
-    <input
-      type="number"
-      pattern="[^0-9.,-]"
-      onChange={onChangeMonetaryInput}
-      placeholder="47,95"
-    />
     This is what I typed: {inputValue}
     <div>
       <h3>Chosen currencies to convert in:</h3>

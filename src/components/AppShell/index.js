@@ -1,20 +1,19 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { App } from "../App";
 
 import {
   getLatestExchangeRates,
   getIsLoading,
   getMonetaryInputValue,
-  getSelectedCurrencyCode,
   getIsSelectedInputCurrencyPopUpOpen,
   getIsSelectedOutputCurrencyPopUpOpen,
   getSelectedOutputExchangeRates,
+  getSelectedCurrencyCode,
 } from "../../selectors/selectors";
 import {
-  onChangeMonetaryInput,
   changeSelectedInputCurrencyCode,
   changeSelectedOutputCurrencyCode,
-  openInputCurrencySelector,
   closeInputCurrencySelector,
   openOutputCurrencySelector,
   closeOutputCurrencySelector,
@@ -22,7 +21,6 @@ import {
   fetchLatestExchangeRatesSuccess,
   fetchLatestExchangeRatesFailed,
 } from "../../actionCreators/actionCreators";
-import { App } from "../App";
 
 export const AppShell = () => {
   // selectors
@@ -50,12 +48,6 @@ export const AppShell = () => {
     dispatch(changeSelectedOutputCurrencyCode(currencyCodes));
   };
 
-  const onChangeInput = (event) => {
-    dispatch(onChangeMonetaryInput(event.target.value));
-  };
-
-  const onOpenCurrencyInputSelector = () =>
-    dispatch(openInputCurrencySelector());
   const onCloseCurrencyInputSelector = () =>
     dispatch(closeInputCurrencySelector());
 
@@ -87,12 +79,9 @@ export const AppShell = () => {
   return (
     <App
       isLoading={isLoading}
-      onChangeMonetaryInput={onChangeInput}
       inputValue={inputValue}
-      selectedCurrencyCode={selectedCurrencyCode}
       isSelectedInputCurrencyPopUpOpen={isSelectedInputCurrencyPopUpOpen}
       onChangeInputCurrencyCode={onChangeInputCurrencyCode}
-      onOpenInputCurrencySelector={onOpenCurrencyInputSelector}
       onCloseInputCurrencySelector={onCloseCurrencyInputSelector}
       onOpenOutputCurrencySelector={onOpenCurrencyOutputSelector}
       onCloseOutputCurrencySelector={onCloseCurrencyOutputSelector}
