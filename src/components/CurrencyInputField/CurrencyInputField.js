@@ -6,6 +6,7 @@ export const CurrencyInputField = ({
   selectedCurrencyCode,
   onChangeMonetaryInput,
   className,
+  currentValue,
 }) => (
   <InputContainer className={className}>
     <ButtonContainer>
@@ -18,7 +19,8 @@ export const CurrencyInputField = ({
         type="text"
         pattern="[^0-9.,-]"
         onChange={onChangeMonetaryInput}
-        placeholder="47,95"
+        placeholder={"47,95"}
+        value={currentValue}
       />
     </InputFieldContainer>
   </InputContainer>
@@ -46,6 +48,10 @@ const MonetaryInput = styled.input`
   display: block;
   font-size: 2.4rem;
   padding: 0.4rem 1rem;
+  
+  &::placeholder {
+    color: #BBB;
+  }
 `;
 
 const ButtonContainer = styled.div`

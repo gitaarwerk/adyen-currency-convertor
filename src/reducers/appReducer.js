@@ -6,7 +6,7 @@ const defaultState = {
   selectedOutputCurrencies: ["USD", "GBP"],
   latestExchangeRates: [],
   selectedCurrencyCode: "EUR",
-  monetaryInputValue: null,
+  monetaryInputValue: "",
   isSelectedInputCurrencyPopUpOpen: false,
   isSelectedOutputCurrencyPopUpOpen: false,
 };
@@ -17,11 +17,21 @@ export default handleActions(
       ...state,
       monetaryInputValue: payload,
     }),
-    [types.CHANGE_SELECTED_INPUT_CURRENCY_CODE]: (state, { payload }) => ({
-      ...state,
-      selectedCurrencyCode: payload,
-      latestExchangeRates: [],
-    }),
+    [types.CHANGE_SELECTED_INPUT_CURRENCY_CODE]: (state, { payload }) => {
+      const newSelection = [
+        ...state.selectedOutputCurrencies.filter(
+          (currencyCoded) => currencyCoded !== payload
+        ),
+        state.selectedCurrencyCode,
+      ];
+
+      return {
+        ...state,
+        selectedOutputCurrencies: newSelection,
+        selectedCurrencyCode: payload,
+        latestExchangeRates: [],
+      };
+    },
     [types.CHANGE_SELECTED_OUTPUT_CURRENCY_CODE]: (state, { payload }) => ({
       ...state,
       selectedOutputCurrencies: payload,
@@ -62,6 +72,16 @@ export default handleActions(
       ...state,
       isLoading: false,
       latestExchangeRates: payload,
+    }),
+
+    [types.ADD_CHARACTER_AT_END]: (state, { payload }) => ({
+      ...state,
+      monetaryInputValue: state.monetaryInputValue + payload,
+    }),
+
+    [types.CLEAR_INPUT]: (state) => ({
+      ...state,
+      monetaryInputValue: "",
     }),
   },
   defaultState

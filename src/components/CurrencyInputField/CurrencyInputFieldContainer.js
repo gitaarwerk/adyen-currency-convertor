@@ -1,5 +1,8 @@
 import React from "react";
-import { getSelectedCurrencyCode } from "../../selectors/selectors";
+import {
+  getSelectedCurrencyCode,
+  getMonetaryInputValue,
+} from "../../selectors/selectors";
 
 import {
   onChangeMonetaryInput,
@@ -11,6 +14,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 export const CurrencyInputFieldContainer = ({ className }) => {
   const selectedCurrencyCode = useSelector(getSelectedCurrencyCode);
+  const currentValue = useSelector(getMonetaryInputValue);
   const dispatch = useDispatch();
 
   const onChangeInput = (event) => {
@@ -25,6 +29,7 @@ export const CurrencyInputFieldContainer = ({ className }) => {
       onOpenInputCurrencySelector={onOpenCurrencyInputSelector}
       selectedCurrencyCode={selectedCurrencyCode}
       onChangeMonetaryInput={onChangeInput}
+      currentValue={currentValue}
     />
   );
 };

@@ -34,3 +34,11 @@ export const fetchLatestExchangeRatesSuccess = create(
 export const fetchLatestExchangeRatesFailed = create(
   types.FETCH_LATEST_EXCHANGE_RATES_FAILED
 );
+
+export const changeInputCurrencyOnClick = create(
+  types.CHANGE_INPUT_CURRENCY_ON_CLICK
+);
+
+export const addCharacterAtEnd = create(types.ADD_CHARACTER_AT_END);
+
+export const clearInput = create(types.CLEAR_INPUT);

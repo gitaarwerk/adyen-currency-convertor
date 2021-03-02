@@ -8,8 +8,9 @@ export const OutputCurrencyItem = ({
   currencyName,
   exchangeRate,
   calculatedValue,
+  onClick,
 }) => (
-  <CurrencyItem className={className}>
+  <CurrencyItem className={className} onClick={onClick}>
     <CurrencyFlag src={`/assets/flags/${currencyCode}.svg`} />
     <CurrencyData>
       <CurrencyName>

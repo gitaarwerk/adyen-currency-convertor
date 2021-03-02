@@ -5,11 +5,12 @@ import { OutputCurrencyItem } from "../OutputCurrencyItem";
 export const OutputCurrencies = ({
   selectedOutputCurrencies,
   onOpenCurrencyOutputSelector,
+  changeInputCurrencyOnClick,
 }) => (
   <>
     <CurrencyListContainer>
       <CurrencyList>
-        {selectedOutputCurrencies.length &&
+        {!!selectedOutputCurrencies.length ? (
           selectedOutputCurrencies.map((currency) => {
             return (
               <OutputCurrencyItem
@@ -18,9 +19,15 @@ export const OutputCurrencies = ({
                 currencyName={currency.name}
                 calculatedValue={currency.value}
                 exchangeRate={currency.rate}
+                onClick={changeInputCurrencyOnClick(currency.currencyCode)}
               />
             );
-          })}
+          })
+        ) : (
+          <strong>
+            No currencies selector for conversion, please select some.
+          </strong>
+        )}
       </CurrencyList>
     </CurrencyListContainer>
     <AddRemoveCurrencyButton onClick={onOpenCurrencyOutputSelector}>
@@ -34,7 +41,7 @@ export const OutputCurrencies = ({
 
 const CurrencyListContainer = styled.div`
   margin: 0;
-  padding: 0 1.2rem 2rem;
+  padding: 4rem;
   width: 100vw;
   overflow: hidden;
   overflow-x: auto;
@@ -56,8 +63,8 @@ const AddRemoveCurrencyButton = styled.button`
   padding: 0.4rem;
   position: absolute;
   right: 1.6rem;
-  bottom: 1.6rem;
   cursor: pointer;
+  margin-top: 2rem;
 
   &:hover {
     text-decoration: underline;

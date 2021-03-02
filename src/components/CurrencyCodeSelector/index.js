@@ -109,7 +109,7 @@ const PopUpBG = styled.div`
 
 const PopUpContainer = styled.div`
   width: calc(100vw - 6.4rem);
-  height: calc(100vh - 6.4rem);
+  height: calc(90vh - 6.4rem);
   padding: 3.2rem;
   margin: 3.2rem;
   position: fixed;
@@ -125,7 +125,7 @@ const PopUpContent = styled.div`
   overflow-y: auto;
   width: 100%;
   height: 100%;
-  max-height: calc(100vh - 22rem);
+  max-height: calc(100vh - 34rem);
   box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.1);
 `;
 
