@@ -9,17 +9,30 @@ export const CurrencyCodeSelector = ({
   type,
 }) => {
   const canOnlySelectOne = type === "radio";
-  console.log(type, canOnlySelectOne)
-
   const [selectedCurrencies, setSelectedCurrencies] = useState(
     selectedCurrencyCodes || []
   );
+  const toggleCurrencyMultiple = (value) => {
+    const index = selectedCurrencies.indexOf(value);
+    const array = [...selectedCurrencies];
+
+    if (index === -1) {
+      array.push(value);
+    } else {
+      array.splice(index, 1);
+    }
+
+    return array;
+  };
 
   const selectCurrency = (event) => {
+    const clickedValue = event.target.value;
     if (canOnlySelectOne) {
-      setSelectedCurrencies([event.target.value]);
+      // always set ths one to clicked
+      setSelectedCurrencies([clickedValue]);
     } else {
-      setSelectedCurrencies([...selectedCurrencies, event.target.value]);
+      // toggle the value here instead
+      setSelectedCurrencies(toggleCurrencyMultiple(clickedValue));
     }
   };
 
