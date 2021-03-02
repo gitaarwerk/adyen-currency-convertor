@@ -1,7 +1,9 @@
 import React from "react";
+import styled from "styled-components";
 import { CurrencyCodeSelector } from "../CurrencyCodeSelector";
 import { Header } from "../Header";
 import { CurrencyInputField } from "../CurrencyInputField";
+import { OutputCurrencies } from "../OutputCurrencies";
 
 export const App = ({
   isLoading,
@@ -13,54 +15,43 @@ export const App = ({
   onOpenOutputCurrencySelector,
   onCloseOutputCurrencySelector,
   onChangeOutputCurrencyCode,
-  selectedOutputCurrencies,
 }) => (
   <div>
-    <Header />
-    <CurrencyInputField />
-    {isSelectedInputCurrencyPopUpOpen && (
-      <CurrencyCodeSelector
-        onCloseCurrencySelector={onCloseInputCurrencySelector}
-        onSelectCurrency={onChangeOutputCurrencyCode}
-        type="radio"
-      />
-    )}
-    {isSelectedOutputCurrencyPopUpOpen && (
-      <CurrencyCodeSelector
-        onCloseCurrencySelector={onCloseOutputCurrencySelector}
-        onSelectCurrency={onChangeOutputCurrencyCode}
-        type="checkbox"
-      />
-    )}
-    This is what I typed: {inputValue}
-    <div>
-      <h3>Chosen currencies to convert in:</h3>
-      <ul style={{ display: "flex" }}>
-        {selectedOutputCurrencies.map((currency) => {
-          return (
-            <li key={currency.cc} style={{ margin: 20 }}>
-              <div>[flag]</div>
-              <div>
-                <div>
-                  <small>{currency.name}</small>
-                </div>
-                <div>
-                  <strong>{currency.cc}</strong>
-                </div>
-                <div>rate: {currency.rate || "no rate available"}</div>
-                <div>{currency.value}</div>
-              </div>
-            </li>
-          );
-        })}
-      </ul>
-      <div>
-        <button onClick={onOpenOutputCurrencySelector}>
-          {selectedOutputCurrencies.length > 1
-            ? "Add or remove currencies"
-            : "Add currency"}
-        </button>
-      </div>
-    </div>
+    <TopSection>
+      <Header />
+      <CurrencyInputField />
+      {isSelectedInputCurrencyPopUpOpen && (
+        <CurrencyCodeSelector
+          onCloseCurrencySelector={onCloseInputCurrencySelector}
+          onSelectCurrency={onChangeOutputCurrencyCode}
+          type="radio"
+        />
+      )}
+    </TopSection>
+    <MiddleSection>
+      <OutputCurrencies />
+      {isSelectedOutputCurrencyPopUpOpen && (
+        <CurrencyCodeSelector
+          onCloseCurrencySelector={onCloseOutputCurrencySelector}
+          onSelectCurrency={onChangeOutputCurrencyCode}
+          type="checkbox"
+        />
+      )}
+    </MiddleSection>
   </div>
 );
+
+const TopSection = styled.div`
+  padding: 3.2rem;
+  background: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 17, 44, 0.3);
+  position: relative; 
+  z-index: 1;
+`;
+
+const MiddleSection = styled.div`
+  background: #f3f6f9;
+  padding: 32px;
+  position: relative;
+  z-index: 0;
+`;
